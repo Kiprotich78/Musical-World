@@ -73,8 +73,7 @@ CREATE TABLE `favorite_songs` (
 );
 
 INSERT INTO `user` (`user_id`,`username`,`mobile_number`,`email_address`,`password`,`confirm_status`) VALUES
-    (1,'Sujith','9876543210', 'admin@gmail.com', 'c12b240b5710c6c9ee00ef4529803aac', 1),
-    (2,'Subramanya','9988776655', 'subramanyarao4@gmail.com', 'a8c6b82ae79f5f29899228ced196b1b7', 1);
+    (1,'cerrullo','254758312954', 'joshuacerullo7@gmail.com', 'b4af804009cb036a4ccdc33431ef9ac9', 1),
 
 INSERT INTO `category` (`cat_id`, `cat_name`) VALUES 
     ('1', 'Rhumba_albums'),
