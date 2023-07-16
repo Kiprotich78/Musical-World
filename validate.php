@@ -102,7 +102,7 @@ if(isset($_POST['login'])){
                 echo 'setTimeout(function () { sweetAlert("Warning...","Please activate your account first!..","warning");';
                 echo '}, 500);</script>';
             }else{
-                    if($row['email_address'] == 'admin@gmail.com' && $row['password'] == 'c12b240b5710c6c9ee00ef4529803aac'){
+                    if($row['email_address'] == 'joshuacerullo7@gmail.com' && $row['password'] == 'b4af804009cb036a4ccdc33431ef9ac9'){
                         $_SESSION['username']=$username;
                         $_SESSION['email_address'] = $email_address;
                         header('location:admin_page.php');
