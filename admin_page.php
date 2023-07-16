@@ -12,7 +12,7 @@
 	$row = mysqli_fetch_array($result);
 	$user_id = $row['user_id'];
 
-	if(isset($_POST['upload_kannada'])){
+	if(isset($_POST['upload_Rhumba'])){
 
         $audio_file = $_FILES['audio_file']['name'];
 		$song_name = mysqli_real_escape_string($conn,$_POST['song_name']);
@@ -27,7 +27,7 @@
 			$file_tmp = $_FILES['audio_file']['tmp_name'];
 			$file_type = $_FILES['audio_file']['type'];
 			
-			move_uploaded_file($file_tmp,"songs/kannada_songs/".$file_name);
+			move_uploaded_file($file_tmp,"songs/rhumba_songs/".$file_name);
          }
          
          if(isset($_FILES['song_image'])){
@@ -36,7 +36,7 @@
 			$file_tmp = $_FILES['song_image']['tmp_name'];
 			$file_type = $_FILES['song_image']['type'];
 			
-			move_uploaded_file($file_tmp,"songs/kannada_songs/img/".$file_name);
+			move_uploaded_file($file_tmp,"songs/rhumba_songs/img/".$file_name);
 		 }
 
 		$sql = "INSERT INTO Rhumba_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
@@ -53,7 +53,7 @@
 
     }
     
-    if(isset($_POST['upload_hindi'])){
+    if(isset($_POST['upload_Gospel'])){
 
         $audio_file = $_FILES['audio_file']['name'];
 		$song_name = mysqli_real_escape_string($conn,$_POST['song_name']);
@@ -68,7 +68,7 @@
 			$file_tmp = $_FILES['audio_file']['tmp_name'];
 			$file_type = $_FILES['audio_file']['type'];
 			
-			move_uploaded_file($file_tmp,"songs/hindi_songs/".$file_name);
+			move_uploaded_file($file_tmp,"songs/gospel_songs/".$file_name);
          }
          
          if(isset($_FILES['song_image'])){
@@ -77,7 +77,7 @@
 			$file_tmp = $_FILES['song_image']['tmp_name'];
 			$file_type = $_FILES['song_image']['type'];
 			
-			move_uploaded_file($file_tmp,"songs/hindi_songs/img/".$file_name);
+			move_uploaded_file($file_tmp,"songs/gospel_songs/img/".$file_name);
 		 }
 
 		$sql = "INSERT INTO Gospel_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
@@ -152,7 +152,7 @@
 
 			if($results){
 				echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { sweetAlert("Deleted"," <b>Song '.$song_name.' is deleted from kannada albums</b>","success");';
+                echo 'setTimeout(function () { sweetAlert("Deleted"," <b>Song '.$song_name.' is deleted from rhumba albums</b>","success");';
 				echo '}, 500);</script>';
 			}else{
 				echo '<script type="text/javascript">';
@@ -181,7 +181,7 @@
 
 			if($results){
 				echo '<script type="text/javascript">';
-                echo 'setTimeout(function () { sweetAlert("Deleted"," <b>Song '.$song_name.' is deleted from hindi albums</b>","success");';
+                echo 'setTimeout(function () { sweetAlert("Deleted"," <b>Song '.$song_name.' is deleted from gospel albums</b>","success");';
 				echo '}, 500);</script>';
 			}else{
 				echo '<script type="text/javascript">';
@@ -345,7 +345,7 @@
 ?>
 
     <div class="alert alert-primary" role="alert">
-         <center><b>Kannda Songs</b></center>
+         <center><b>Rhumba Songs</b></center>
     </div>
 
 <form method="post" action="admin_page.php" enctype="multipart/form-data">
@@ -395,7 +395,7 @@
 		
 		<div class="col">
 			<div class="text-center">
-				<button type="submit" name="upload_kannada" class="btn btn-default btn-rounded mb-4">Upload <i class="fa fa-upload"></i></button>
+				<button type="submit" name="upload_Rhumba" class="btn btn-default btn-rounded mb-4">Upload <i class="fa fa-upload"></i></button>
 			</div>
 		</div>
 	</div>	
@@ -410,7 +410,7 @@
 
     echo "
         <div class='card'>
-            <h3 class='card-header text-center font-weight-bold text-uppercase py-4'>Kannada Songs</h3>
+            <h3 class='card-header text-center font-weight-bold text-uppercase py-4'>Rhumba Songs</h3>
             <div class='card-body'>
                 <div id='table' class='table-editable'>
                     <table class='table table-bordered table-responsive-md table-striped text-center'>
@@ -448,7 +448,7 @@
 ?>
 
 <div class="alert alert-primary" role="alert">
-     <center><b>Hindi Songs</b></center>
+     <center><b>Gospel Songs</b></center>
 </div>
 
 
@@ -499,7 +499,7 @@
 		
 		<div class="col">
 			<div class="text-center">
-				<button type="submit" name="upload_hindi" class="btn btn-default btn-rounded mb-4">Upload <i class="fa fa-upload"></i></button>
+				<button type="submit" name="upload_Gospel" class="btn btn-default btn-rounded mb-4">Upload <i class="fa fa-upload"></i></button>
 			</div>
 		</div>
 	</div>	
@@ -514,7 +514,7 @@
 
     echo "
         <div class='card'>
-            <h3 class='card-header text-center font-weight-bold text-uppercase py-4'>Hindi Songs</h3>
+            <h3 class='card-header text-center font-weight-bold text-uppercase py-4'>Gospel Songs</h3>
             <div class='card-body'>
                 <div id='table' class='table-editable'>
                     <table class='table table-bordered table-responsive-md table-striped text-center'>
