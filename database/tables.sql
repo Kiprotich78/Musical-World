@@ -77,7 +77,7 @@ INSERT INTO `user` (`user_id`,`username`,`mobile_number`,`email_address`,`passwo
     (2,'Subramanya','9988776655', 'subramanyarao4@gmail.com', 'a8c6b82ae79f5f29899228ced196b1b7', 1);
 
 INSERT INTO `category` (`cat_id`, `cat_name`) VALUES 
-    ('1', 'kannada_albums'),
-    ('2', 'hindi_albums'),
+    ('1', 'Rhumba_albums'),
+    ('2', 'Gospel_albums'),
     ('3', 'english_albums'),
     ('4', 'uploaded_albums');
