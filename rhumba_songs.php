@@ -307,7 +307,7 @@ a.btn-card {
 							<div class="col-10">
 								<h6>email</h6>
 								<p>
-									<a href="mailto:example@email.com" class="text-dark">admin@musicalworld.com</a>
+									<a href="mailto:joshuacerullo7@gmail.com" class="text-dark">admin@musicalworld.com</a>
 								</p>
 							</div>
 						</div>
@@ -319,7 +319,7 @@ a.btn-card {
 							</div>
 							<div class="col-10">
 								<h6>phone</h6>
-								<p>+91 7899496873</p>
+								<p>+254 758 312954</p>
 							</div>
 						</div>
 					</div>
@@ -330,7 +330,7 @@ a.btn-card {
 							</div>
 							<div class="col-10">
 								<h6>address</h6>
-								<p>DSI Labz | Adyar Mangalore</p>
+								<p>Ongata Rongai</p>
 							</div>
 						</div>
 					</div>
