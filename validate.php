@@ -15,7 +15,7 @@
 		
     if($password == $confirm_password){
         if(preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/",$email_address)){
-            if(preg_match("/^[6-9]\d{9}$/", $mobile_number)){
+            if(preg_match("/^254\d{9}$/", $mobile_number)){
 
                 $sql_email = "SELECT email_address FROM user WHERE email_address='$email_address'";
                 $result_email = mysqli_query($conn,$sql_email);
@@ -36,20 +36,17 @@
                         $activation_code = hash('sha256',mt_rand(0,1000));
                         $hash_password = md5($password);   
 
-                        $sql = "INSERT INTO user (`username`,`password`,`mobile_number`,`email_address`,`activation_code`) VALUES('$username','$hash_password','$mobile_number','$email_address','$activation_code')";
+                        $sql = "INSERT INTO user (`username`,`password`,`mobile_number`,`email_address`, `confirm_status`,`activation_code`) VALUES('$username','$hash_password','$mobile_number','$email_address',1,'$activation_code')";
 
                         $result = mysqli_query($conn,$sql);
 
                         if(!$result)
                             die("Error while updating!!!...").mysqli_error($conn);
                         else{
-                                $_SESSION['username']=$username;	
-                                $_SESSION['mobile_number']=$mobile_number;	
-                                $_SESSION['email_address']=$email_address;	
-                                $_SESSION['password']=$password;
-                                $_SESSION['activation_code']=$activation_code;
-
-                                include('activate_email.php');
+                            $_SESSION['username']=$username;
+                            $_SESSION['email_address'] = $email_address;
+                            header('location:profile.php');
+                                
                             }
                     }
             }else{
