@@ -61,7 +61,7 @@
 <html>
 
 <head>
-	<title>Musical World | Kannada Songs</title>
+	<title>Musical World | Rhumba Songs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 	<link rel="icon" href="images/i1.png" />
@@ -216,8 +216,8 @@ a.btn-card {
 						<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">Track</button>
 								<div class="dropdown-menu dropdown-primary">
-									<a class="dropdown-item" href="kannada_songs.php"><b>Kannada Songs</b></a>
-									<a class="dropdown-item" href="hindi_songs.php"><b>Hindi Songs</b></a>
+									<a class="dropdown-item" href="rhumba_songs.php"><b>Rhumba Songs</b></a>
+									<a class="dropdown-item" href="gospel_songs.php"><b>Gospel Songs</b></a>
 									<a class="dropdown-item" href="english_songs.php"><b>English Songs</b></a>
 									<a class="dropdown-item" href="uploaded_songs.php"><b>Uploaded Songs</b></a>
 								</div>	
@@ -307,7 +307,7 @@ a.btn-card {
 							<div class="col-10">
 								<h6>email</h6>
 								<p>
-									<a href="mailto:example@email.com" class="text-dark">admin@musicalworld.com</a>
+									<a href="mailto:joshuacerullo7@gmail.com" class="text-dark">admin@musicalworld.com</a>
 								</p>
 							</div>
 						</div>
@@ -319,7 +319,7 @@ a.btn-card {
 							</div>
 							<div class="col-10">
 								<h6>phone</h6>
-								<p>+91 7899496873</p>
+								<p>+254 758 312954</p>
 							</div>
 						</div>
 					</div>
@@ -330,7 +330,7 @@ a.btn-card {
 							</div>
 							<div class="col-10">
 								<h6>address</h6>
-								<p>DSI Labz | Adyar Mangalore</p>
+								<p>Ongata Rongai</p>
 							</div>
 						</div>
 					</div>
