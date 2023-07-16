@@ -12,7 +12,7 @@
 	$row = mysqli_fetch_array($result);
 	$user_id = $row['user_id'];
 
-	$sql = "SELECT * FROM kannada_albums ORDER BY song_id ASC";
+	$sql = "SELECT * FROM Rhumba_albums ORDER BY song_id ASC";
 	$result = mysqli_query($conn,$sql);
 
 	while($rows = mysqli_fetch_array($result)){
@@ -28,7 +28,7 @@
             	echo '}, 500);</script>';
 			}else{
 
-			$sql = "SELECT * FROM kannada_albums WHERE song_id = '$song_id' ";
+			$sql = "SELECT * FROM Rhumba_albums WHERE song_id = '$song_id' ";
 			$results = mysqli_query($conn,$sql);
 
 			$row = mysqli_fetch_array($results);
@@ -61,7 +61,7 @@
 <html>
 
 <head>
-	<title>Musical World | Kannada Songs</title>
+	<title>Musical World | Rhumba Songs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 	<link rel="icon" href="images/i1.png" />
@@ -204,7 +204,7 @@ a.btn-card {
                 <pre>                 </pre>
                 <li class="nav-item">
 					<b style="font-size:20px;"><p style="color:blue;"><?php echo "Logged in as ".$_SESSION['username'];?></p></b>
-                    <p style="color:blue;">| Kannada Songs |</p>
+                    <p style="color:blue;">| Rhumba Songs |</p>
                 </li>
 				<button class="navbar-toggler ml-lg-auto ml-sm-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -216,8 +216,8 @@ a.btn-card {
 						<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">Track</button>
 								<div class="dropdown-menu dropdown-primary">
-									<a class="dropdown-item" href="kannada_songs.php"><b>Kannada Songs</b></a>
-									<a class="dropdown-item" href="hindi_songs.php"><b>Hindi Songs</b></a>
+									<a class="dropdown-item" href="rhumba_songs.php"><b>Rhumba Songs</b></a>
+									<a class="dropdown-item" href="gospel_songs.php"><b>Gospel Songs</b></a>
 									<a class="dropdown-item" href="english_songs.php"><b>English Songs</b></a>
 									<a class="dropdown-item" href="uploaded_songs.php"><b>Uploaded Songs</b></a>
 								</div>	
@@ -241,7 +241,7 @@ a.btn-card {
 
 		<?php
 			include('connection.php');
-			$sql = "SELECT * FROM kannada_albums ORDER BY song_id ASC";
+			$sql = "SELECT * FROM Rhumba_albums ORDER BY song_id ASC";
 			$result = mysqli_query($conn,$sql);
 
 			echo "<section class='details-card'>
@@ -257,15 +257,15 @@ a.btn-card {
 					$audio_file = $row['audio_file'];
 					echo "
 							<div class='col-md-3'>
-								<form method='post' action='kannada_songs.php'>
+								<form method='post' action='rhumba_songs.php'>
 									<div class='card-deck'>
 										<div class='card-img'>
-											<img src='songs/kannada_songs/img/$song_image' style='width:350px;height:250px;'alt=''>
+											<img src='songs/rhumba_songs/img/$song_image' style='width:350px;height:250px;'alt=''>
 										</div>
 										<div class='card-desc'>
 											<h3>$song_name | $singer_name</h3>
 											<h3>movie - $movie_name</h3>
-											<audio class='embed-responsive-item' controls='' preload='none'> <source src='songs/kannada_songs/$audio_file' type='audio/mp3'></audio><br>
+											<audio class='embed-responsive-item' controls='' preload='none'> <source src='songs/rhumba_songs/$audio_file' type='audio/mp3'></audio><br>
 											<div class='row'><button type='submit' style='color:red;' class='btn-card' name='$song_id'><i class='fa fa-heart'></i></button><br></div><br>  
 										</div>
 									</div>
