@@ -39,7 +39,7 @@
 			move_uploaded_file($file_tmp,"songs/kannada_songs/img/".$file_name);
 		 }
 
-		$sql = "INSERT INTO kannada_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
+		$sql = "INSERT INTO Rhumba_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
 		$result = mysqli_query($conn,$sql);
 		if($result){
 				echo '<script type="text/javascript">';
@@ -80,7 +80,7 @@
 			move_uploaded_file($file_tmp,"songs/hindi_songs/img/".$file_name);
 		 }
 
-		$sql = "INSERT INTO hindi_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
+		$sql = "INSERT INTO Gospel_albums(`song_name`,`song_format`,`singer_name`,`movie_name`,`song_image`,`audio_file`) VALUES('$song_name','$song_format','$singer_name','$movie_name','$song_image','$audio_file')";
 		$result = mysqli_query($conn,$sql);
 		if($result){
 				echo '<script type="text/javascript">';
@@ -133,21 +133,21 @@
 		}
     }
     
-    $sql = "SELECT * FROM kannada_albums ORDER BY song_id ASC";
+    $sql = "SELECT * FROM Rhumba_albums ORDER BY song_id ASC";
 	$result = mysqli_query($conn,$sql);
 
 	while($rows = mysqli_fetch_array($result)){
 		$song_id = $rows['song_id'];
 		if(isset($_POST[$song_id])){
 
-			$sql = "SELECT * FROM kannada_albums WHERE song_id = '$song_id' ";
+			$sql = "SELECT * FROM Rhumba_albums WHERE song_id = '$song_id' ";
 			$results = mysqli_query($conn,$sql);
 
 			$row = mysqli_fetch_array($results);
 			$song_id = $row['song_id'];
 			$song_name = $row['song_name'];
 
-			$sql = "DELETE FROM kannada_albums WHERE song_name = '$song_name' ";
+			$sql = "DELETE FROM Rhumba_albums WHERE song_name = '$song_name' ";
 			$results = mysqli_query($conn,$sql);
 
 			if($results){
@@ -162,21 +162,21 @@
         }
     }
 
-    $sql = "SELECT * FROM hindi_albums ORDER BY song_id ASC";
+    $sql = "SELECT * FROM Gospel_albums ORDER BY song_id ASC";
 	$result = mysqli_query($conn,$sql);
 
 	while($rows = mysqli_fetch_array($result)){
 		$song_id = $rows['song_id'];
 		if(isset($_POST[$song_id])){
 
-			$sql = "SELECT * FROM hindi_albums WHERE song_id = '$song_id' ";
+			$sql = "SELECT * FROM Gospel_albums WHERE song_id = '$song_id' ";
 			$results = mysqli_query($conn,$sql);
 
 			$row = mysqli_fetch_array($results);
 			$song_id = $row['song_id'];
 			$song_name = $row['song_name'];
 
-			$sql = "DELETE FROM hindi_albums WHERE song_name = '$song_name' ";
+			$sql = "DELETE FROM Gospel_albums WHERE song_name = '$song_name' ";
 			$results = mysqli_query($conn,$sql);
 
 			if($results){
@@ -405,7 +405,7 @@
 
     include('connection.php');
 
-    $sql = "SELECT * FROM kannada_albums order by song_id";
+    $sql = "SELECT * FROM Rhumba_albums order by song_id";
     $result = mysqli_query($conn,$sql);
 
     echo "
@@ -509,7 +509,7 @@
 
     include('connection.php');
 
-    $sql = "SELECT * FROM hindi_albums order by song_id";
+    $sql = "SELECT * FROM Gospel_albums order by song_id";
     $result = mysqli_query($conn,$sql);
 
     echo "
