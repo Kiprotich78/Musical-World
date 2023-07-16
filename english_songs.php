@@ -379,7 +379,7 @@ a.btn-card {
 	<!-- //contact -->
 	<!-- copyright -->
 	<div class="cpy-right text-center">
-		<p>© 2018 Musical World. All rights reserved</p>
+		<p>© 2023 Musical World. All rights reserved</p>
 	</div>
     <!-- //copyright -->
     <!-- js-->
