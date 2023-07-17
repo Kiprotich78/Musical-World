@@ -31,9 +31,9 @@
 
 		$song_image = 'musical-world.jpg';
 
-		$sql="CALL uploadsongs('$singer_id','$song_name','$song_format','$singer_name','$song_image','$audio_file')";
+		// $sql="CALL uploadsongs('$singer_id','$song_name','$song_format','$singer_name','$song_image','$audio_file')";
 
-		// $sql = "INSERT INTO upload_albums(`singer_id`,`song_name`,`song_format`,`singer_name`,`song_image`,`audio_file`) VALUES('$singer_id','$song_name','$song_format','$singer_name','$song_image','$audio_file')";
+		$sql = "INSERT INTO upload_albums(`singer_id`,`song_name`,`song_format`,`singer_name`,`song_image`,`audio_file`) VALUES('$singer_id','$song_name','$song_format','$singer_name','$song_image','$audio_file')";
 		$result = mysqli_query($conn,$sql);
 		if($result){
 				echo '<script type="text/javascript">';
